@@ -28,3 +28,5 @@ app.get('/', async function (req, res) {
     const cert = Buffer.from(JSON.stringify(req.socket.getPeerCertificate())).toString("base64Url")
     res.redirect(`${req.query.url}/cert=${cert}`)
 })
+
+module.exports = app;
